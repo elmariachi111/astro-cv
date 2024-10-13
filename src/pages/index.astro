@@ -1,27 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import LucideIcon from "../components/Lucide.astro";
 import CardExperience from "../components/card-experience.astro";
+import Layout from "../layouts/Layout.astro";
 
-import {
-  Mail,
-  Phone,
-  Github,
-  Linkedin,
-  User,
-  Star,
-  Code,
-  Coffee,
-  Lightbulb,
-} from "lucide";
-import PersonalInformation from "../components/sidebar/personal-information.astro";
-import Stations from "../components/sidebar/stations.astro";
-import Skills from "../components/sidebar/skills.astro";
-import ImageSection from "../components/sidebar/image-section.astro";
 import Education from "../components/Education.astro";
+import ImageSection from "../components/sidebar/image-section.astro";
+import PersonalInformation from "../components/sidebar/personal-information.astro";
+import Skills from "../components/sidebar/skills.astro";
+import Stations from "../components/sidebar/stations.astro";
 import SkillCard from "../components/skill-card.astro";
-
-//import Image from "next/image"
 ---
 
 <Layout title="CV | Stefan Adolf">
@@ -56,11 +42,11 @@ import SkillCard from "../components/skill-card.astro";
 
     {/* Right Column */}
     <div class="sm:w-2/3 bg-white p-8 space-y-8">
-      <section>
-        <h2 class="text-2xl font-semibold mb-4">
-          Professional Work Experience
-        </h2>
+      <section class="flex flex-col gap-12">
         <div class="space-y-6">
+          <h2 class="text-2xl font-semibold mb-4">
+            Professional Work Experience
+          </h2>
           <CardExperience
             title="Lead Web3 Developer"
             position="Molecule AG | Oct 2022 - now"
@@ -83,11 +69,16 @@ import SkillCard from "../components/skill-card.astro";
                 </p>
               </li>
               <li>
-                built the <a href="" target="_blank">catalyst contract suite</a>
+                built the <a
+                  href="https://basescan.org/address/0x20893fdd12E5F968B2231821Fc65Dd0e4eAB797C#readProxyContract"
+                  target="_blank">catalyst contract suite</a
+                >
                 <p>
-                  Bonding Curve based market, configurable curve shapes and
-                  parameters. Rather complex premint aware curve math. Non
-                  trivial market state machine. Subgraphs, custom metadata api
+                  Bonding Curve based market on an ERC-1155 asset, various fee
+                  taking concepts, configurable curve shapes (linear, non zero
+                  upramp, sigmoidal / logistic) and math parameters. Non trivial
+                  market state transitions. Subgraphs, custom metadata api.
+                  Sophisticated separation of concerns, multisig setup awareness
                 </p>
               </li>
               <li>
@@ -100,6 +91,7 @@ import SkillCard from "../components/skill-card.astro";
                   Account Kit), integrated Privy.
                 </p>
               </li>
+              <li>Running and maintaining 2 Lit network nodes (~ 800$/m)</li>
               <li>
                 MD for German subsidiary (Desci Entwicklungsgesellschaft mbH)
               </li>
@@ -115,10 +107,11 @@ import SkillCard from "../components/skill-card.astro";
                 and in public
               </li>
               <li>
-                Specialist dev allocations
+                Specialist dev tasks
                 <p>
                   built backend / APIs for a fully automated supply chain
-                  solution (resourceful). Headless CMS integrations, custom
+                  solution (resourceful), built fully fledged management
+                  interface (Vue 2, Vuetify). Headless CMS integrations, custom
                   Spryker projects, Kubernetes debugging, Cloud deployments,
                   architecture support
                 </p>
@@ -135,14 +128,18 @@ import SkillCard from "../components/skill-card.astro";
                 </p>
               </li>
               <li>
-                university support (HTW Berlin)
-                <p>
-                  supported 5 student groups with techno-economical project
-                  ideas
-                </p>
+                exposure to media (security / IT / health publications) for tech
+                topics & decentralised patient data
+                <li>
+                  university support (HTW Berlin)
+                  <p>
+                    supported 5 student groups with techno-economical project
+                    ideas
+                  </p>
+                </li>
+                <li>ran local (coding earth) meetup groups all over Europe</li>
+                <li>supported tech sales team</li>
               </li>
-              <li>ran local (coding earth) meetup groups all over Europe</li>
-              <li>supported tech sales team</li>
             </ul>
           </CardExperience>
           <CardExperience
@@ -177,144 +174,180 @@ import SkillCard from "../components/skill-card.astro";
             title="Cofounder / CTO"
             position="IQ Studio GbR / AreaDigital AG | 2001 - 2009"
           >
-            With 3 friends we founded a small agency and published an ezine on
-            mobile devices. AreaMobile became one of Germany's most relevant
-            tech publications, was listed among the 100 most important German
-            AGOF sites. I was fully responsible for technical setup, product
-            development and also worked as chief editor for all mobile
-            publications. Cofounder and me fully exited the company in 2009. Max
-            headcount: 34, max dev team size: 10. AreaMobile was sold several
-            times, most recently belonged to Computec Media but was ultimately
-            closed down in 2022.
+            Founded a small agency with 3 friends and published an ezine on
+            mobile devices. <em>AreaMobile</em> became one of Germany's most relevant
+            tech publications, was listed among the 100 most important German AGOF
+            sites. I was fully responsible for technical setup, product development
+            and also worked as chief editor for all mobile publications. Cofounder
+            and me fully exited the company in 2009. Max headcount: 34, max dev team
+            size: 10. AreaMobile was sold several times, most recently belonged to
+            Computec Media but was ultimately closed down in 2022.
           </CardExperience>
         </div>
-      </section>
 
-      {/* Projects */}
-      <section>
-        <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-        <div class="space-y-6">
-          <CardExperience
-            title="Head Curator"
-            position="Code Talks / AboutYOU | 2020-2022"
-          >
-            helped curating Code Talks 2022 (one of Germany's largest dev
-            conferences), close collaboration with AboutYOU org team, organized
-            panels, did introduction addresses, speaker support, managed team of
-            7 curators
-          </CardExperience>
-          <CardExperience
-            title="Freelancer"
-            position="Warranti | July / Aug 2022"
-          >
-            supported an RWA company with token architecture. Built proof of
-            concept for a Seaport based trading protocol, using custom on chain
-            events to signal vaulting of RWAs.
-          </CardExperience>
-          <CardExperience
-            title="Cofounder"
-            position="Takeover Movement | Nov 2021 - Aug 2022"
-          >
-            The Takeover Movement was supposed to be a Patreon / Bandcamp
-            replacement in Web3. Built prototype in Next / Wagmi. Tokengated
-            deeplinks, Paypal & crypto payment options. Failed after the team
-            became massively web3-bearish during the FTX / Terra-meltdown
-          </CardExperience>
-          <CardExperience
-            title="Cofounder"
-            position="Splice | Oct 2021 - Mar 2022"
-          >
-            <p>
-              Created out of a finalist project at EthOnline 21. Splice is a
-              derivative NFT platform that allows NFT holders to mint derived
-              artworks using p5 algorithms that are stored on IPFS and NFTs
-              themselves. Derivatives are limited, code style authors get paid
-              when holders mint new pieces. Failed after remote team didn't want
-              to take the risk
-            </p>
-            <ul class="list-disc list-inside space-y-1 w-full">
-              <li>Rust based color extraction</li>
-              <li>Oraclized color palette proofs</li>
-              <li>
-                Contract suite (Derivative NFT collection, style collection,
-                payment splitters, royalty modules)
-              </li>
-            </ul>
-          </CardExperience>
-        </div>
-      </section>
+        {/* Projects */}
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+          <div class="space-y-6">
+            <CardExperience
+              title="Technical Advisor "
+              position="Welshare Health | 2024 - "
+            >
+              supporting welshare to build KYC / AML compliant token launch
+              primitives, help with token generation, brainstorming and advising
+              on decentralised storage aspects, app development and data
+              architectures
+            </CardExperience>
+            <CardExperience
+              title="Head Curator"
+              position="Code Talks / AboutYOU | 2020-2022"
+            >
+              helped curating Code Talks 2022 (one of Germany's largest dev
+              conferences), close collaboration with AboutYOU org team,
+              organized panels, did introduction addresses, speaker support,
+              managed team of 7 curators
+            </CardExperience>
+            <CardExperience
+              title="Freelancer"
+              position="Warranti | July / Aug 2022"
+            >
+              supported an RWA company with token architecture. Built proof of
+              concept for a Seaport based trading protocol, using custom on
+              chain events to signal vaulting of RWAs.
+            </CardExperience>
+            <CardExperience
+              title="Cofounder"
+              position="Takeover Movement | Nov 2021 - Aug 2022"
+            >
+              The Takeover Movement was supposed to be a Patreon / Bandcamp
+              replacement in Web3. Built prototype in Next / Wagmi. Tokengated
+              deeplinks, Paypal & crypto payment options. Failed after the team
+              became massively web3-bearish during the FTX / Terra-meltdown
+            </CardExperience>
+            <CardExperience
+              title="Cofounder"
+              position="Splice | Oct 2021 - Mar 2022"
+            >
+              <p>
+                Created out of a finalist project at EthOnline 21. Splice is a
+                derivative NFT platform that allows NFT holders to mint derived
+                artworks using p5 algorithms that are stored on IPFS and NFTs
+                themselves. Derivatives are limited, code style authors get paid
+                when holders mint new pieces. Failed after remote team didn't
+                want to take the risk
+              </p>
+              <ul class="list-disc list-inside space-y-1 w-full">
+                <li>Rust based color extraction</li>
+                <li>Oraclized color palette proofs</li>
+                <li>
+                  Contract suite (Derivative NFT collection, style collection,
+                  payment splitters, royalty modules)
+                </li>
+              </ul>
+            </CardExperience>
+          </div>
+        </section>
 
-      {/* Detailed Skills Explanation */}
-      <section>
-        <h2 class="text-2xl font-semibold mb-4">Hard Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {
-            [
-              {
-                name: "Typescript / Node",
-                experience: "12 years",
-                rating: 5,
-                description:
-                  "Built countless TS applications, backends, node servers, database layers, serverless functions etc.",
-              },
-              {
-                name: "React",
-                experience: "5 years",
-                rating: 5,
-                description:
-                  "All obvious fundamentals, composition, hooks, context, suspense. Deal with SSR & SSG. Most familiar with Nextjs, CRA, Gatsby, Astro.",
-              },
-              {
-                name: "Solidity",
-                experience: "4 years",
-                rating: 4,
-                description:
-                  "Built ~6 larger contract suites, using Foundry, Hardhat, Truffle. Deep understanding of ABI encoding, byte operations, fix point maths and all relevant tooling",
-              },
-              {
-                name: "Rust",
-                experience: "1 years",
-                rating: 2,
-                description:
-                  "Can write standalone Rust apps (with some gpt help), understand most concepts, but not a pro. Can build Solana simple programs. Build local tools & eWASM exports",
-              },
-              {
-                name: "Subgraphs",
-                experience: "4 years",
-                rating: 5,
-                description:
-                  "Setting up schema architectures, local and remote deployments, grafts, imports, studio setups, matchstick-as testing",
-              },
-              {
-                name: "EVM / Consensus",
-                experience: "4 years",
-                rating: 4,
-                description:
-                  "Deep knowledge of EVM storage layout, Merkle Patricia tries, Proofs. Quite familiar with the PoS consensus system, EIP 1559",
-              },
-              {
-                name: "EIP ecosystem",
-                experience: "5 years",
-                rating: 4,
-                description:
-                  "Deeply familiar with all major standards (all OpenZeppelin primitives), excited about EIP 6551, 4361, 1271 and their extended modern counterparts",
-              },
-              {
-                name: "Decentralised Periphery",
-                experience: "4 years",
-                rating: 4,
-                description:
-                  "Decentralised Storage: IPFS / Filecoin, Pinata / web3.storage (UCANs), Arweave / Irys. Deeply familiar with ceramic, EAS. ",
-              },
-            ].map((skill, index) => <SkillCard {...skill} />)
-          }
-        </div>
+        {/* Detailed Skills Explanation */}
+        <section>
+          <h2 class="text-2xl font-semibold mb-4">Hard Skills</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {
+              [
+                {
+                  name: "Typescript / Node",
+                  experience: "12 years",
+                  rating: 5,
+                  description:
+                    "Built countless TS applications, backends, node servers, database layers, serverless functions etc.",
+                },
+                {
+                  name: "React",
+                  experience: "5 years",
+                  rating: 5,
+                  description:
+                    "All obvious fundamentals, composition, hooks, context, suspense. Deal with SSR & SSG. Most familiar with Nextjs, CRA, Gatsby, Astro.",
+                },
+                {
+                  name: "Solidity",
+                  experience: "4 years",
+                  rating: 4,
+                  description:
+                    "Built ~6 larger contract suites, using Foundry, Hardhat, Truffle. Deep understanding of ABI encoding, byte operations, fix point maths and all relevant tooling",
+                },
+                {
+                  name: "Rust",
+                  experience: "1 years",
+                  rating: 2,
+                  description:
+                    "Can write standalone Rust apps (with some gpt help), understand most concepts, but not a pro. Can build simple Solana programs. Build local tools & eWASM exports",
+                },
+                {
+                  name: "Subgraphs",
+                  experience: "4 years",
+                  rating: 4,
+                  description:
+                    "Setting up schema architectures, local and remote deployments, grafts, imports, studio setups, matchstick-as testing",
+                },
+                {
+                  name: "EVM / Consensus",
+                  experience: "4 years",
+                  rating: 3,
+                  description:
+                    "Deep knowledge of EVM storage layout, Merkle Patricia tries, Proofs. Quite familiar with the PoS consensus system, EIP 1559",
+                },
+                {
+                  name: "EIP ecosystem",
+                  experience: "5 years",
+                  rating: 4,
+                  description:
+                    "Deeply familiar with all major standards (all OpenZeppelin primitives), excited about EIP 6551, 4361, 1271 and their upcoming extensions",
+                },
+                {
+                  name: "Decentralised Periphery",
+                  experience: "4 years",
+                  rating: 4,
+                  description:
+                    "Decentralised Storage: IPFS / Filecoin, Pinata / web3.storage (UCANs), Arweave / Irys. Deeply familiar with ceramic, EAS. Built identity aware projects on top of W3C DIDs, VCs, JSON-LD",
+                },
+                {
+                  name: "Database Systems",
+                  experience: "22 years",
+                  rating: 4,
+                  description:
+                    "SQL (MySql, Sqlite, Postgres, Oracle) & NoSQL (Mongo, Redis), Indexers (ElasticSearch), ORMs (Hibernate, Doctrine, Prisma, kysely, TypeORM)",
+                },
+                {
+                  name: "Dev Ops / Deployment",
+                  experience: "20 years",
+                  rating: 3,
+                  description:
+                    "Cloud Deployments (GCP, Digital Ocean, AWS), Docker, CI/CD, Logging & Monitoring. Running Consensus / IPFS Nodes. Can deploy a payload on K8S and read Helm Charts if necessary.",
+                },
+                {
+                  name: "PHP",
+                  experience: "infinite years",
+                  rating: 4,
+                  description:
+                    "Ragequit the ecosystem in 2019, was professional Symfony user, gave talks at major conferences. Also used Laravel, Zend, Wordpress, Spryker, API Platform",
+                },
+                {
+                  name: "Python",
+                  experience: "3 years",
+                  rating: 2,
+                  description:
+                    "mostly dealing with Jupyter notebooks, writing simulations for Solidity math in Python before continuing in Solidity.",
+                },
+              ].map((skill, index) => <SkillCard {...skill} />)
+            }
+          </div>
+        </section>
       </section>
     </div>
   </main>
-</Layout>
 
-<style>
-  main {
-  }
-</style>
+  <style>
+    main {
+    }
+  </style>
+</Layout>
