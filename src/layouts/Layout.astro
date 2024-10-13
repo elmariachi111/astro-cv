@@ -1,95 +1,137 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
 
 import LucideIcon from "../components/Lucide.astro";
 
-import { Mail, Phone, Github, Linkedin, User, Star, Code, Coffee, Lightbulb } from "lucide"
+import {
+  Mail,
+  Phone,
+  Github,
+  Linkedin,
+  User,
+  Star,
+  Code,
+  Coffee,
+  Lightbulb,
+} from "lucide";
 ---
-
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="CV" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="max-w-7xl mx-auto bg-white shadow-lg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="CV" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="max-w-7xl mx-auto bg-white shadow-lg">
       {/* Inverted section for name and profile links */}
       <div class="bg-gray-800 text-white p-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <h1 class="text-4xl font-bold mb-4 md:mb-0">Stefan Adolf</h1>
           <div class="flex space-x-4">
-            <a href="mailto:stadolf@duck.com" class="hover:text-gray-300">
+            <a
+              href="mailto:stadolf+cv@gmail.com?subject=Found Your CV on the Interwebs, lets chat"
+              class="hover:text-gray-300"
+            >
               <LucideIcon icon={Mail} class="w-6 h-6" />
             </a>
-            <a href="https://calendar.app.google/A9ib4he7Dwd6RPtb7" target="_blank" rel="noopener noreferrer"  class="hover:text-gray-300">
+            <a
+              href="https://calendar.app.google/A9ib4he7Dwd6RPtb7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-gray-300"
+            >
               <LucideIcon icon={Phone} class="w-6 h-6" />
             </a>
-            <a href="https://github.com/elmariachi111/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+            <a
+              href="https://github.com/elmariachi111/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-gray-300"
+            >
               <LucideIcon icon={Github} class="w-6 h-6" />
             </a>
-            <a href="https://www.linkedin.com/in/stadolf/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+            <a
+              href="https://www.linkedin.com/in/stadolf/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-gray-300"
+            >
               <LucideIcon icon={Linkedin} class="w-6 h-6" />
             </a>
           </div>
         </div>
       </div>
 
-		<slot />
+      <slot />
 
-		{/* Footer */}
-		<footer class="bg-gray-100 text-gray-600 py-8 px-4">
-			<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-				<div class="space-y-2">
-					<h3 class="font-semibold flex items-center"><LucideIcon icon={Code} class="w-5 h-5 mr-2" /> Witty Dev Note</h3>
-					<p class="text-sm">I don't always test my code, but when I do, I do it in production.</p>
-				</div>
-				<div class="space-y-2">
-					<h3 class="font-semibold flex items-center"><LucideIcon icon={Coffee} class="w-5 h-5 mr-2" /> Inspirational Quote</h3>
-					<p class="text-sm">"The best error message is the one that never shows up." - Thomas Fuchs</p>
-				</div>
-				<div class="space-y-2">
-					<h3 class="font-semibold flex items-center"><LucideIcon icon={Lightbulb} class="w-5 h-5 mr-2" /> AI Appreciation</h3>
-					<p class="text-sm">Thank you v0 for building this amazing template! You're the real MVP.</p>
-				</div>
-			</div>
-		</footer>
-	</body>
+      {/* Footer */}
+      <footer class="bg-gray-100 text-gray-600 py-8 px-4">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="space-y-2">
+            <h3 class="font-semibold flex items-center">
+              <LucideIcon icon={Code} class="w-5 h-5 mr-2" /> Witty Dev Note
+            </h3>
+            <p class="text-sm">
+              "I would like to buy 3 muffins with chocolate chips." - "Sorry, we
+              only accept cash here"
+            </p>
+          </div>
+          <div class="space-y-2">
+            <h3 class="font-semibold flex items-center">
+              <LucideIcon icon={Coffee} class="w-5 h-5 mr-2" /> Inspirational Quote
+            </h3>
+            <p class="text-sm">
+              There are seven days in a week and none is called someday.
+            </p>
+          </div>
+          <div class="space-y-2">
+            <h3 class="font-semibold flex items-center">
+              <LucideIcon icon={Lightbulb} class="w-5 h-5 mr-2" /> AI Appreciation
+            </h3>
+            <p class="text-sm">
+              Thank you v0 for building this amazing template! You're the real
+              MVP.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <style is:global>
+    :root {
+      --accent: 136, 58, 234;
+      --accent-light: 224, 204, 250;
+      --accent-dark: 49, 10, 101;
+      --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--accent)),
+        rgb(var(--accent-light)) 30%,
+        white 60%
+      );
+    }
+    html {
+      font-family: system-ui, sans-serif;
+      /*background: #13151a;*/
+    }
+    code {
+      font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+    }
+  </style>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		/*background: #13151a;*/
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
