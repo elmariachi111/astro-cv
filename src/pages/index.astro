@@ -19,6 +19,7 @@ import Stations from "../components/sidebar/stations.astro";
 import Skills from "../components/sidebar/skills.astro";
 import ImageSection from "../components/sidebar/image-section.astro";
 import Education from "../components/Education.astro";
+import SkillCard from "../components/skill-card.astro";
 
 //import Image from "next/image"
 ---
@@ -202,88 +203,67 @@ import Education from "../components/Education.astro";
 
       {/* Detailed Skills Explanation */}
       <section>
-        <h2 class="text-2xl font-semibold mb-4">Skills in Depth</h2>
+        <h2 class="text-2xl font-semibold mb-4">Hard Skills in Depth</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {
             [
               {
-                name: "JavaScript (ES6+)",
-                experience: "7 years",
+                name: "Typescript / Node",
+                experience: "12 years",
                 rating: 5,
                 description:
-                  "Proficient in modern JavaScript, including async/await, destructuring, and modules. Experienced with functional programming concepts and closures.",
+                  "Built countless TS applications, backends, node servers, database layers, serverless functions etc.",
               },
               {
-                name: "React.js",
+                name: "React",
                 experience: "5 years",
                 rating: 5,
                 description:
-                  "Extensive experience building complex UIs with React, including state management with Redux and Context API. Familiar with hooks and custom hook creation.",
+                  "All obvious fundamentals, composition, hooks, context, suspense. Deal with SSR & SSG. Most familiar with Nextjs, CRA, Gatsby, Astro.",
               },
               {
-                name: "Node.js",
+                name: "Solidity",
                 experience: "4 years",
                 rating: 4,
                 description:
-                  "Strong backend development skills using Express.js. Experienced in building RESTful APIs, handling authentication, and integrating with databases.",
+                  "Built ~6 larger contract suites, using Foundry, Hardhat, Truffle. Deep understanding of ABI encoding, byte operations, fix point maths and all relevant tooling",
               },
               {
-                name: "Python",
-                experience: "3 years",
-                rating: 3,
+                name: "Rust",
+                experience: "1 years",
+                rating: 2,
                 description:
-                  "Proficient in Python for data analysis and scripting. Familiar with libraries such as Pandas and NumPy for data manipulation and analysis.",
+                  "Can write standalone Rust apps (with some gpt help), understand most concepts, but not a pro. Can build Solana simple programs. Build local tools & eWASM exports",
               },
               {
-                name: "SQL",
-                experience: "6 years",
-                rating: 4,
-                description:
-                  "Experienced in writing complex queries, optimizing database performance, and working with both relational (PostgreSQL, MySQL) and NoSQL (MongoDB) databases.",
-              },
-              {
-                name: "Git",
-                experience: "7 years",
+                name: "Subgraphs",
+                experience: "4 years",
                 rating: 5,
                 description:
-                  "Advanced knowledge of version control using Git, including branching strategies, rebasing, and resolving merge conflicts.",
+                  "Setting up schema architectures, local and remote deployments, grafts, imports, studio setups, matchstick-as testing",
               },
               {
-                name: "RESTful APIs",
+                name: "EVM / Consensus",
+                experience: "4 years",
+                rating: 4,
+                description:
+                  "Deep knowledge of EVM storage layout, Merkle Patricia tries, Proofs. Quite familiar with the PoS consensus system, EIP 1559",
+              },
+              {
+                name: "EIP ecosystem",
                 experience: "5 years",
                 rating: 4,
                 description:
-                  "Skilled in designing and implementing RESTful APIs, with a focus on best practices for security, performance, and scalability.",
+                  "Deeply familiar with all major standards (all OpenZeppelin primitives), excited about EIP 6551, 4361, 1271 and their extended modern counterparts",
               },
               {
-                name: "Agile Methodologies",
+                name: "Decentralised Periphery",
                 experience: "4 years",
                 rating: 4,
                 description:
-                  "Experienced in working with Scrum and Kanban methodologies, including sprint planning, daily stand-ups, and retrospectives.",
+                  "Decentralised Storage: IPFS / Filecoin, Pinata / web3.storage (UCANs), Arweave / Irys. Deeply familiar with ceramic, EAS. ",
               },
-            ].map((skill, index) => (
-              <div key={index} class="bg-gray-100 p-4 rounded-lg">
-                <h3 class="text-lg font-semibold">{skill.name}</h3>
-                <p class="text-sm text-gray-600 mb-2">
-                  {skill.experience} of professional experience
-                </p>
-                <div
-                  class="flex mb-2"
-                  aria-label={`Skill level: ${skill.rating} out of 5 stars`}
-                >
-                  {[...Array(5)].map((_, i) => (
-                    <LucideIcon
-                      icon={Star}
-                      key={i}
-                      className={`w-4 h-4 ${i < skill.rating ? "text-yellow-400" : "text-gray-300"}`}
-                      fill={i < skill.rating ? "currentColor" : "none"}
-                    />
-                  ))}
-                </div>
-                <p class="text-sm">{skill.description}</p>
-              </div>
-            ))
+            ].map((skill, index) => <SkillCard {...skill} />)
           }
         </div>
       </section>

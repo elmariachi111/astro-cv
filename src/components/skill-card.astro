@@ -1,0 +1,30 @@
+---
+import LucideIcon from "./Lucide.astro";
+import { Github } from "lucide";
+interface Props {
+  name: string;
+  experience: string;
+  rating: number;
+  description: string;
+}
+const { name, experience, rating, description } = Astro.props;
+---
+
+<div class="bg-gray-100 p-4 rounded-lg">
+  <h3 class="text-lg font-semibold">{name}</h3>
+  <p class="text-sm text-gray-600 mb-2">
+    {experience} of professional experience
+  </p>
+  <div class="flex mb-2" aria-label={`Skill level: ${rating} out of 5 stars`}>
+    {
+      [...Array(5)].map((_, i) => (
+        <LucideIcon
+          icon={Github}
+          className={`w-4 h-4 ${i < rating ? "text-orange-300" : "text-gray-300"}`}
+          fill={i < rating ? "currentColor" : "none"}
+        />
+      ))
+    }
+  </div>
+  <p class="text-sm">{description}</p>
+</div>
