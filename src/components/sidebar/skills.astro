@@ -1,0 +1,21 @@
+---
+interface Props {
+  skills: string[];
+}
+const {skills} = Astro.props;
+---
+
+<section>
+  <h2 class="text-2xl font-semibold mb-4 text-gray-300">Tech Skills</h2>
+  <div class="flex flex-wrap gap-2">
+    {
+     skills.map((skill) => (
+        <span
+          class="bg-gray-700 text-gray-200 px-3 py-1 rounded-full text-sm"
+        >
+          {skill}
+        </span>
+      ))
+    }
+  </div>
+</section>

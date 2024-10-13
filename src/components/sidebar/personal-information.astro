@@ -1,0 +1,33 @@
+---
+import LucideIcon from "../Lucide.astro";
+import { Telegram, X } from "simple-icons-astro";
+import { Mail, User, Earth } from "lucide";
+---
+
+<section>
+  <h2 class="text-2xl font-semibold mb-4 text-gray-300">Personal Info</h2>
+  <div class="space-y-2">
+    <div class="flex items-center ">
+      <LucideIcon icon={User} class="w-5 h-5 mr-2 text-gray-400" />
+      <span class="font-bold">Web3 Engineer</span>,&nbsp;
+      <span >Fullstack Dev</span>,&nbsp;
+      <span >Speaker</span>
+    </div>
+    <div class="flex items-center">
+      <LucideIcon icon={Earth} class="w-5 h-5 mr-2 text-gray-400" />
+      <span>Berlin, Germany</span>
+    </div>
+    <div class="flex items-center">
+      <LucideIcon icon={Mail} class="w-5 h-5 mr-2 text-gray-400" />
+      <span>stadolf+cv@gmail.com</span>
+    </div>
+    <div class="flex items-center">
+      <Telegram class="w-5 h-5 mr-2 text-gray-400" />
+      <span>@stadolf</span>
+    </div>
+    <div class="flex items-center">
+      <X class="w-5 h-5 mr-2 text-gray-400" />
+      <span>stadolf</span>
+    </div>
+  </div>
+</section>
