@@ -1,33 +1,82 @@
 ---
 import LucideIcon from "../Lucide.astro";
-import { Telegram, X } from "simple-icons-astro";
+import {
+  Telegram,
+  X,
+  Github,
+  Discord,
+  Farcaster,
+  Ethereum,
+} from "simple-icons-astro";
 import { Mail, User, Earth } from "lucide";
 ---
 
 <section>
   <h2 class="text-2xl font-semibold mb-4 text-gray-300">Personal Info</h2>
   <div class="space-y-2">
-    <div class="flex items-center ">
+    <div class="flex items-center">
       <LucideIcon icon={User} class="w-5 h-5 mr-2 text-gray-400" />
       <span class="font-bold">Web3 Engineer</span>,&nbsp;
-      <span >Fullstack Dev</span>,&nbsp;
-      <span >Speaker</span>
+      <span>Fullstack Dev</span>,&nbsp;
+      <span>Speaker</span>
     </div>
     <div class="flex items-center">
       <LucideIcon icon={Earth} class="w-5 h-5 mr-2 text-gray-400" />
       <span>Berlin, Germany</span>
     </div>
     <div class="flex items-center">
+      <Github class="w-5 h-5 mr-2 text-gray-400" />
+      <a
+        class="hover:underline"
+        href="https://github.com/elmariachi111?"
+        target="_blank"
+        rel="noopener noreferrer">elmariachi111</a
+      >
+    </div>
+    <div class="flex items-center">
       <LucideIcon icon={Mail} class="w-5 h-5 mr-2 text-gray-400" />
-      <span>stadolf+cv@gmail.com</span>
+      <a
+        class="hover:underline"
+        href="mailto:stadolf+cv@gmail.com?subject=Found Your CV on the Interwebs, lets chat"
+        target="_blank"
+        rel="noopener noreferrer">stadolf+cv@gmail.com</a
+      >
     </div>
     <div class="flex items-center">
       <Telegram class="w-5 h-5 mr-2 text-gray-400" />
       <span>@stadolf</span>
     </div>
     <div class="flex items-center">
+      <Discord class="w-5 h-5 mr-2 text-gray-400" />
+      <span>elmariachi#8789</span>
+    </div>
+
+    <div class="flex items-center">
       <X class="w-5 h-5 mr-2 text-gray-400" />
-      <span>stadolf</span>
+      <a
+        class="hover:underline"
+        href="https://x.com/stadolf"
+        target="_blank"
+        rel="noopener noreferrer">stadolf</a
+      >
+    </div>
+    <div class="flex items-center">
+      <Farcaster class="w-5 h-5 mr-2 text-gray-400" />
+      <a
+        class="hover:underline"
+        href="https://warpcast.com/elmariachi.eth"
+        target="_blank"
+        rel="noopener noreferrer">elmariachi.eth</a
+      >
+    </div>
+    <div class="flex items-center">
+      <Ethereum class="w-5 h-5 mr-2 text-gray-400" />
+      <a
+        class="hover:underline"
+        href="https://etherscan.io/address/stadolf.eth"
+        target="_blank"
+        rel="noopener noreferrer">stadolf.eth</a
+      >
     </div>
   </div>
 </section>

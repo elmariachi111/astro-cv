@@ -42,6 +42,10 @@ import Education from "../components/Education.astro";
           "Testing",
           "IPFS",
           "Docker",
+          "GCP",
+          "DigitalOcean",
+          "Mongo",
+          "ElasticSearch",
         ]}
       />
       <Stations />
@@ -59,51 +63,86 @@ import Education from "../components/Education.astro";
             title="Lead Web3 Developer"
             position="Molecule AG | Oct 2022 - now"
           >
-            <ul class="list-disc list-inside space-y-1">
+            <ul class="list-disc list-inside space-y-1 w-full">
               <li>
-                Led a team of 5 developers in creating a high-performance web
-                application
+                built the IP infrastructure & contracts
+                <p>
+                  Using foundry for building, testing, scripting. Maintaining
+                  scripts for local and CI deployments. Fuzz & Integration
+                  tests. Suite covers NFT, tonkenization and crowdselling
+                  contracts. Prepared and supported audits. Uses minimal clones
+                  for ERC20 fractions. Maintaining exhaustive subgraph.
+                  <a
+                    href="https://github.com/moleculeprotocol/IPNFT"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >https://github.com/moleculeprotocol/IPNFT</a
+                  >
+                </p>
               </li>
               <li>
-                Implemented microservices architecture, improving system
-                scalability by 40%
+                built the <a href="" target="_blank">catalyst contract suite</a>
+                <p>
+                  Bonding Curve based market, configurable curve shapes and
+                  parameters. Rather complex premint aware curve math. Non
+                  trivial market state machine. Subgraphs, custom metadata api
+                </p>
               </li>
-              <li>Mentored junior developers and conducted code reviews</li>
+              <li>
+                primary contributor to all frontend facing applications
+                <p>
+                  built many aspects of frontend facing apps, using
+                  Next14/React/TS. Using Viem/Wagmi (2). Dealt with
+                  decentralized encryption (Lit protocol), file upload flows
+                  (arweave, w3 storage), Siwe and AA/4337 support (Alchemy
+                  Account Kit), integrated Privy.
+                </p>
+              </li>
+              <li>
+                MD for German subsidiary (Desci Entwicklungsgesellschaft mbH)
+              </li>
             </ul>
           </CardExperience>
-          <div class="bg-gray-100 p-4 rounded-lg">
-            <h3 class="text-xl font-medium">Senior Developer</h3>
-            <p class="text-gray-600 mb-2">
-              TechCorp Inc. | June 2021 - Present
-            </p>
-            <ul class="list-disc list-inside space-y-1">
+          <CardExperience
+            title="Developer Ambassador"
+            position="Turbine Kreuzberg | Jan 2018 - Dec 2021"
+          >
+            <ul class="list-disc list-inside space-y-1 w-full">
               <li>
-                Led a team of 5 developers in creating a high-performance web
-                application
+                Mainly advocate role, representing agency at events, meetups,
+                and in public
               </li>
               <li>
-                Implemented microservices architecture, improving system
-                scalability by 40%
+                Specialist dev allocations
+                <p>
+                  built backend / APIs for a fully automated supply chain
+                  solution (resourceful). Headless CMS integrations, custom
+                  Spryker projects, Kubernetes debugging, Cloud deployments,
+                  architecture support
+                </p>
               </li>
-              <li>Mentored junior developers and conducted code reviews</li>
+              <li>
+                Blockchain / Decentralized Evangelist and Developer
+                <p>
+                  Main contributor to "DePA", Ethereum based medical health
+                  records, identity solutions using W3C/DID & VCs, building an
+                  universal Covid immunization certificate verifier (<a
+                    href="https://github.com/elmariachi111/ultimate-non-infectious-verifier"
+                    target="_blank">Univax</a
+                  >).
+                </p>
+              </li>
+              <li>
+                university support (HTW Berlin)
+                <p>
+                  supported 5 student groups with techno-economical project
+                  ideas
+                </p>
+              </li>
+              <li>ran local (coding earth) meetup groups all over Europe</li>
+              <li>supported tech sales team</li>
             </ul>
-          </div>
-          <div class="bg-gray-100 p-4 rounded-lg">
-            <h3 class="text-xl font-medium">Full Stack Developer</h3>
-            <p class="text-gray-600 mb-2">
-              WebSolutions LLC | August 2020 - May 2021
-            </p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>
-                Developed and maintained multiple client websites using React
-                and Node.js
-              </li>
-              <li>Optimized database queries, reducing load times by 30%</li>
-              <li>
-                Collaborated with UX designers to implement responsive designs
-              </li>
-            </ul>
-          </div>
+          </CardExperience>
         </div>
       </section>
 
@@ -111,26 +150,53 @@ import Education from "../components/Education.astro";
       <section>
         <h2 class="text-2xl font-semibold mb-4">Projects</h2>
         <div class="space-y-6">
-          <div class="bg-gray-100 p-4 rounded-lg">
-            <h3 class="text-xl font-medium">E-commerce Platform</h3>
-            <p class="text-gray-600 mb-2">Personal Project</p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Built a full-stack e-commerce platform using MERN stack</li>
-              <li>Implemented secure payment processing with Stripe</li>
-              <li>Deployed on AWS using Docker containers</li>
-            </ul>
-          </div>
-          <div class="bg-gray-100 p-4 rounded-lg">
-            <h3 class="text-xl font-medium">Task Management App</h3>
-            <p class="text-gray-600 mb-2">Open Source Contribution</p>
-            <ul class="list-disc list-inside space-y-1">
-              <li>Contributed to an open-source task management application</li>
+          <CardExperience
+            title="Head Curator"
+            position="Code Talks / AboutYOU | 2020-2022"
+          >
+            helped curating Code Talks 2022 (one of Germany's largest dev
+            conferences), close collaboration with AboutYOU org team, organized
+            panels, did introduction addresses, speaker support, managed team of
+            7 curators
+          </CardExperience>
+          <CardExperience
+            title="Freelancer"
+            position="Warranti | July / Aug 2022"
+          >
+            supported an RWA company with token architecture. Built proof of
+            concept for a Seaport based trading protocol, using custom on chain
+            events to signal vaulting of RWAs.
+          </CardExperience>
+          <CardExperience
+            title="Cofounder"
+            position="Takeover Movement | Nov 2021 - Aug 2022"
+          >
+            The Takeover Movement was supposed to be a Patreon / Bandcamp
+            replacement in Web3. Built prototype in Next / Wagmi. Tokengated
+            deeplinks, Paypal & crypto payment options. Failed after the team
+            became massively web3-bearish during the FTX / Terra-meltdown
+          </CardExperience>
+          <CardExperience
+            title="Cofounder"
+            position="Splice | Oct 2021 - Mar 2022"
+          >
+            <p>
+              Created out of a finalist project at EthOnline 21. Splice is a
+              derivative NFT platform that allows NFT holders to mint derived
+              artworks using p5 algorithms that are stored on IPFS and NFTs
+              themselves. Derivatives are limited, code style authors get paid
+              when holders mint new pieces. Failed after remote team didn't want
+              to take the risk
+            </p>
+            <ul class="list-disc list-inside space-y-1 w-full">
+              <li>Rust based color extraction</li>
+              <li>Oraclized color palette proofs</li>
               <li>
-                Implemented drag-and-drop functionality for task prioritization
+                Contract suite (Derivative NFT collection, style collection,
+                payment splitters, royalty modules)
               </li>
-              <li>Added real-time collaboration features using WebSockets</li>
             </ul>
-          </div>
+          </CardExperience>
         </div>
       </section>
 
