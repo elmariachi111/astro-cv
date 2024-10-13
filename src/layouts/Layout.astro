@@ -4,7 +4,12 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import LucideIcon from "../components/Lucide.astro";
+
+import { Mail, Phone, Github, Linkedin, User, Star, Code, Coffee, Lightbulb } from "lucide"
 ---
+
 
 <!doctype html>
 <html lang="en">
@@ -17,7 +22,47 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<div class="max-w-5xl mx-auto bg-white shadow-lg">
+      {/* Inverted section for name and profile links */}
+      <div class="bg-gray-800 text-white p-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <h1 class="text-4xl font-bold mb-4 md:mb-0">John Doe</h1>
+          <div class="flex space-x-4">
+            <a href="mailto:john.doe@email.com" class="hover:text-gray-300">
+              <LucideIcon icon={Mail} class="w-6 h-6" />
+            </a>
+            <a href="tel:+11234567890" class="hover:text-gray-300">
+              <LucideIcon icon={Phone} class="w-6 h-6" />
+            </a>
+            <a href="https://github.com/johndoe" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+              <LucideIcon icon={Github} class="w-6 h-6" />
+            </a>
+            <a href="https://linkedin.com/in/johndoe" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">
+              <LucideIcon icon={Linkedin} class="w-6 h-6" />
+            </a>
+          </div>
+        </div>
+      </div>
+
 		<slot />
+
+		{/* Footer */}
+		<footer class="bg-gray-100 text-gray-600 py-8 px-4">
+			<div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="space-y-2">
+					<h3 class="font-semibold flex items-center"><LucideIcon icon={Code} class="w-5 h-5 mr-2" /> Witty Dev Note</h3>
+					<p class="text-sm">I don't always test my code, but when I do, I do it in production.</p>
+				</div>
+				<div class="space-y-2">
+					<h3 class="font-semibold flex items-center"><LucideIcon icon={Coffee} class="w-5 h-5 mr-2" /> Inspirational Quote</h3>
+					<p class="text-sm">"The best error message is the one that never shows up." - Thomas Fuchs</p>
+				</div>
+				<div class="space-y-2">
+					<h3 class="font-semibold flex items-center"><LucideIcon icon={Lightbulb} class="w-5 h-5 mr-2" /> AI Appreciation</h3>
+					<p class="text-sm">Thank you v0 for building this amazing template! You're the real MVP.</p>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
 <style is:global>
@@ -34,7 +79,7 @@ const { title } = Astro.props;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		/*background: #13151a;*/
 	}
 	code {
 		font-family:
