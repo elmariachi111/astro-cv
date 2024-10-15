@@ -8,6 +8,11 @@ import PersonalInformation from "../components/sidebar/personal-information.astr
 import Skills from "../components/sidebar/skills.astro";
 import Stations from "../components/sidebar/stations.astro";
 import SkillCard from "../components/skill-card.astro";
+
+import jpg_warranti from "../assets/warranti.jpg";
+import jpg_takeover from "../assets/takeover_panel.jpg";
+import jpg_ctPanel from "../assets/ct_panel.jpg";
+import jpg_check from "../assets/check.jpg";
 ---
 
 <Layout title="CV | Stefan Adolf">
@@ -49,7 +54,9 @@ import SkillCard from "../components/skill-card.astro";
           </h2>
           <CardExperience
             title="Lead Web3 Developer"
-            position="Molecule AG | Oct 2022 - now"
+            position="Molecule AG"
+            href="https://molecule.xyz"
+            time="Oct 2022 - now"
           >
             <ul class="list-disc list-inside space-y-1 w-full">
               <li>
@@ -72,7 +79,9 @@ import SkillCard from "../components/skill-card.astro";
                 Built the <a
                   href="https://basescan.org/address/0x20893fdd12E5F968B2231821Fc65Dd0e4eAB797C#readProxyContract"
                   target="_blank">catalyst contract suite</a
-                >
+                > (<a href="https://catalyst.molecule.xyz" target="_blank"
+                  >catalyst.molecule.xyz</a
+                >)
                 <p>
                   Bonding Curve based market on an ERC-1155 asset, various fee
                   taking concepts, configurable curve shapes (linear, non zero
@@ -82,7 +91,10 @@ import SkillCard from "../components/skill-card.astro";
                 </p>
               </li>
               <li>
-                Primary contributor to all frontend-facing applications
+                Primary contributor to all frontend-facing applications (e.g. <a
+                  href="https://mint.molecule.xyz/ipnft/2"
+                  target="_blank">IPNFTs</a
+                >)
                 <p>
                   Built many aspects of frontend facing apps, using
                   Next14/React/TS. Using Viem/Wagmi (2). Dealt with
@@ -99,7 +111,9 @@ import SkillCard from "../components/skill-card.astro";
           </CardExperience>
           <CardExperience
             title="Developer Ambassador"
-            position="Turbine Kreuzberg | Jan 2018 - Dec 2021"
+            position="Turbine Kreuzberg"
+            time="Jan 2018 - Dec 2021"
+            href="https://turbinekreuzberg.com"
           >
             <ul class="list-disc list-inside space-y-1 w-full">
               <li>
@@ -144,7 +158,9 @@ import SkillCard from "../components/skill-card.astro";
           </CardExperience>
           <CardExperience
             title="Lead Developer / Fullstack"
-            position="Check24 / eH-Visio GmbH | Oct 2015 - Dec 2017"
+            position="Check24 / eH-Visio GmbH"
+            time="Oct 2015 - Dec 2017"
+            image={jpg_check}
           >
             Extended familiarity with the Symfony Fullstack MVC framework, using
             Doctrine / MongoDB for complex comparison queries. Building a
@@ -154,7 +170,9 @@ import SkillCard from "../components/skill-card.astro";
           </CardExperience>
           <CardExperience
             title="Senior Developer / Fullstack"
-            position="Discounto GmbH | Jan 2014 - Sep 2015"
+            position="Discounto GmbH"
+            time="Jan 2014 - Sep 2015"
+            href="https://discounto.de"
           >
             Relaunched a heavyweight monolithic custom made PHP application.
             Scaling across 5 BSD servers / 3 data replicas. Full responsibility
@@ -164,7 +182,9 @@ import SkillCard from "../components/skill-card.astro";
           </CardExperience>
           <CardExperience
             title="Team Lead / Assistant Manager"
-            position="Samsung SDS Europe | May 2010 - May 2012"
+            position="Samsung SDS Europe German Branch"
+            time="May 2010 - May 2012"
+            href="https://www.samsungsds.com/eu/index.html"
           >
             Leading a developer team of 8. Coding Java Enterprise eCommerce
             applications. Using Oracle SQL (9i), Spring Framework (2), iBATIS
@@ -172,7 +192,9 @@ import SkillCard from "../components/skill-card.astro";
           </CardExperience>
           <CardExperience
             title="Cofounder / CTO"
-            position="IQ Studio GbR / AreaDigital AG | 2001 - 2009"
+            position="IQ Studio GbR / AreaDigital AG"
+            time="2001 - 2009"
+            href="https://web.archive.org/web/20080601000000*/areamobile.de"
           >
             Founded a small agency with 3 friends and published an ezine on
             mobile devices. <em>AreaMobile</em> became one of Germany's most relevant
@@ -191,7 +213,9 @@ import SkillCard from "../components/skill-card.astro";
           <div class="space-y-6">
             <CardExperience
               title="Technical Advisor "
-              position="Welshare Health | 2024 - "
+              position="Welshare Health"
+              time="2024 - "
+              href="https://welshare.health"
             >
               supporting welshare to build KYC / AML compliant token launch
               primitives, help with token generation, brainstorming and advising
@@ -200,7 +224,10 @@ import SkillCard from "../components/skill-card.astro";
             </CardExperience>
             <CardExperience
               title="Head Curator"
-              position="Code Talks / AboutYOU | 2020-2022"
+              position="Code Talks / AboutYOU"
+              time="2020-2022"
+              href="https://codetalks.de/"
+              image={jpg_ctPanel}
             >
               helped curating Code Talks 2022 (one of Germany's largest dev
               conferences), close collaboration with AboutYOU org team,
@@ -209,7 +236,9 @@ import SkillCard from "../components/skill-card.astro";
             </CardExperience>
             <CardExperience
               title="Freelancer"
-              position="Warranti | July / Aug 2022"
+              position="Warranti"
+              time="Summer 22"
+              image={jpg_warranti}
             >
               supported an RWA company with token architecture. Built proof of
               concept for a Seaport based trading protocol, using custom on
@@ -217,7 +246,9 @@ import SkillCard from "../components/skill-card.astro";
             </CardExperience>
             <CardExperience
               title="Cofounder"
-              position="Takeover Movement | Nov 2021 - Aug 2022"
+              position="Takeover Movement"
+              time="Nov 2021 - Aug 2022"
+              image={jpg_takeover}
             >
               The Takeover Movement was supposed to be a Patreon / Bandcamp
               replacement in Web3. Built prototype in Next / Wagmi. Tokengated
@@ -226,7 +257,9 @@ import SkillCard from "../components/skill-card.astro";
             </CardExperience>
             <CardExperience
               title="Cofounder"
-              position="Splice | Oct 2021 - Mar 2022"
+              position="Splice"
+              time="Oct 2021 - May 2022"
+              href="https://getsplice.io/"
             >
               <p>
                 Created out of a finalist project at EthOnline 21. Splice is a

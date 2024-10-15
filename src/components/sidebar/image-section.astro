@@ -1,106 +1,116 @@
 ---
+import { Image } from "astro:assets";
 import "swiper/css/bundle";
-import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import jpg_ct22Talk from "../../assets/ct22_talk.jpg";
+import jpg_moderateBo from "../../assets/moderate_bo.jpg";
+import jpg_ctSpeaker from "../../assets/ct_speaker.jpg";
+import jpg_ctPanel from "../../assets/ct_panel.jpg";
+import jpg_meetupIvq from "../../assets/meetup_ivq.jpg";
+import jpg_bchh2 from "../../assets/bchh2.jpg";
+import jpg_bch2 from "../../assets/bch2.jpg";
+import jpg_blockstagram from "../../assets/blockstagram.jpg";
+import jpg_cb_txb from "../../assets/cb_txb.jpg";
+import jpg_sfliveb_speaker from "../../assets/sfliveb_speaker.jpg";
+import jpg_hack_bvg from "../../assets/hack_bvg.jpg";
+import jpg_hack_eb2 from "../../assets/hack_eb2.jpg";
+import jpg_hack2 from "../../assets/hack2.jpg";
+import jpg_ostalb from "../../assets/ostalb.jpg";
+import jpg_meetup_pt from "../../assets/meetup_pt.jpg";
+import jpg_meetup from "../../assets/meetup.jpg";
+import jpg_txb_final_presentation from "../../assets/txb_final_presentation.jpg";
 ---
 
 <div class="swiper">
   <div class="swiper-wrapper">
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/ct22_talk.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_ct22Talk} alt="Codetalks 22" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/moderate_bo.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_moderateBo} alt="Turbine Kreuzberg 21" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/ct_speaker.jpg" alt="Stefan" class="object-cover" />
+        <Image src={jpg_ctSpeaker} alt="Codetalks 19" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/ct_panel.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_ctPanel} alt="Codetalks 22" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/meetup_ivq.jpg" alt="Stefan" class="object-cover" />
+        <Image src={jpg_meetupIvq} alt="Meetup talk at Inviqa" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/bchh2.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_bchh2} alt="Blockchain Hackathon 19" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/bch2.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_bch2} alt="Blockchain Hackathon 19" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/blockstagram.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_blockstagram} alt="Blockstack Hackathon 18" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/cb_txb.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_cb_txb} alt="Coding Berlin" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img
-          src="/sfliveb_speaker.jpg"
-          alt="Another Image"
-          class="object-cover"
-        />
+        <Image src={jpg_sfliveb_speaker} alt="Symfony Live 19" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/hack_bvg.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_hack_bvg} alt="BVG Hack 19" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/hack_eb2.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_hack_eb2} alt="Eth Berlin 2 19" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/hack2.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_hack2} alt="Diffusion 19" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/ostalb.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_ostalb} alt="Ostalb Hackathon 21" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/meetup_pt.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_meetup_pt} alt="Coding Portugal 18" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img src="/meetup.jpg" alt="Another Image" class="object-cover" />
+        <Image src={jpg_meetup} alt="Coding Berlin 18" />
       </div>
     </div>
     <div class="swiper-slide">
       <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-        <img
-          src="/txb_final_presentation.jpg"
-          alt="Another Image"
-          class="object-cover"
-        />
+        <Image src={jpg_txb_final_presentation} alt="Turbine Kreuzberg 18" />
       </div>
     </div>
-    <!-- Add more SwiperSlide components as needed -->
+    <div class="swiper-pagination"></div>
   </div>
-  <div class="swiper-pagination"></div>
   <script>
     import Swiper from "swiper";
     import { Pagination, Autoplay } from "swiper/modules";
@@ -110,6 +120,10 @@ import "swiper/css/navigation";
       spaceBetween: 10,
       autoplay: {
         delay: 2500,
+      },
+      pagination: {
+        type: "bullets",
+        enabled: true,
       },
       loop: true,
       enabled: true,
