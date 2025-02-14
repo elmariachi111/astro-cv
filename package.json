@@ -11,18 +11,19 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/tailwind": "^5.1.2",
-    "@tailwindcss/typography": "^0.5.15",
-    "astro": "^4.16.2",
-    "lucide": "^0.452.0",
-    "lucide-react": "^0.452.0",
-    "simple-icons-astro": "^13.14.0",
+    "@astrojs/tailwind": "^6.0.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "astro": "^5.3.0",
+    "lucide": "^0.455.0",
+    "lucide-react": "^0.455.0",
+    "simple-icons": "^14.6.0",
+    "simple-icons-astro": "^14.6.0",
     "swiper": "^11.1.14",
-    "tailwindcss": "^3.4.13",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5.6.3"
   },
   "devDependencies": {
-    "prettier": "^3.3.3",
+    "prettier": "^3.5.1",
     "prettier-plugin-astro": "^0.14.1"
   }
 }
