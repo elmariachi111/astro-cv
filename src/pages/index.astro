@@ -13,7 +13,6 @@ import jpg_warranti from "../assets/warranti.jpg";
 import jpg_takeover from "../assets/takeover_panel.jpg";
 import jpg_ctPanel from "../assets/ct_panel.jpg";
 import jpg_check from "../assets/check.jpg";
-import jpg_welsh from "../assets/welshare_gang.jpg";
 ---
 
 <Layout title="CV | Stefan Adolf">
@@ -49,6 +48,36 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
     {/* Right Column */}
     <div class="sm:w-2/3 bg-white p-8 space-y-8">
       <section class="flex flex-col gap-12">
+
+        {/* Bio / Transition Block */}
+        <div class="bg-emerald-50 border border-emerald-200 rounded-xl p-6 space-y-3">
+          <h2 class="text-2xl font-semibold text-emerald-900">Currently: Climate</h2>
+          <p class="text-gray-700 leading-relaxed">
+            I'm a senior software engineer with 25 years of building production systems —
+            currently making a deliberate pivot into climate tech, sustainability, and
+            public-interest engineering.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            My background is in data infrastructure, research platforms, and privacy-preserving
+            systems. At <a href="https://welshare.health" class="content-link" target="_blank" rel="noopener noreferrer">welshare</a> I'm
+            building the infrastructure for citizen-owned health data contribution to science.
+            Before that, at <a href="https://molecule.xyz" class="content-link" target="_blank" rel="noopener noreferrer">Molecule</a>,
+            I built the funding infrastructure for decentralized scientific research.
+            Both are direct precedents for what climate work needs at its core: trusted data systems,
+            novel coordination mechanisms, and open infrastructure for science.
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            I'm looking for senior engineering, tech lead, or CTO-adjacent roles at climate
+            organizations, research institutes, policy bodies, or mission-driven startups.
+            Based in Berlin — open to Germany, Europe, and the UK.
+          </p>
+          <div class="flex flex-wrap gap-2 pt-1">
+            {["Data Infrastructure", "Research Platforms", "Privacy Tech", "Open Source", "Team Leadership", "Technical Strategy"].map(tag => (
+              <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">{tag}</span>
+            ))}
+          </div>
+        </div>
+
         <div class="space-y-6">
           <h2 class="text-2xl font-semibold mb-4">
             Professional Work Experience
@@ -58,7 +87,6 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
             position="welshare"
             href="https://welshare.health"
             time="Mar 2025 - now"
-            image={jpg_welsh}
           >
             <p>
               Building infrastructure for citizens to own and contribute health data to science
