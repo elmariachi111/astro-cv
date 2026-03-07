@@ -13,7 +13,7 @@ import jpg_warranti from "../assets/warranti.jpg";
 import jpg_takeover from "../assets/takeover_panel.jpg";
 import jpg_ctPanel from "../assets/ct_panel.jpg";
 import jpg_check from "../assets/check.jpg";
-import jpg_welsh from "../assets/welshare_gang.jpg";
+import jpg_profile from "../assets/profile.jpg";
 ---
 
 <Layout title="CV | Stefan Adolf">
@@ -27,18 +27,18 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
 
       <Skills
         skills={[
-          "Typescript",
+          "TypeScript",
           "React",
           "Node",
-          "Solidity",
           "GraphQL",
           "Testing",
-          "IPFS",
           "Docker",
           "GCP",
-          "DigitalOcean",
-          "Mongo",
+          "PostgreSQL",
+          "MongoDB",
           "ElasticSearch",
+          "Python",
+          "Mathematics",
         ]}
       />
       <Stations />
@@ -49,6 +49,28 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
     {/* Right Column */}
     <div class="sm:w-2/3 bg-white p-8 space-y-8">
       <section class="flex flex-col gap-12">
+
+        {/* Bio / Transition Block */}
+        <div class="bg-emerald-50 rounded-xl p-6 flex gap-6 items-start">
+          <div class="flex-1 space-y-3">
+            <ul class="space-y-2 text-gray-700">
+              <li>Senior software engineer, 25 years building production systems — deliberately pivoting into climate tech, sustainability, and public-interest engineering.</li>
+              <li>At <a href="https://welshare.health" class="content-link" target="_blank" rel="noopener noreferrer">welshare</a>: building infrastructure for citizen-owned health data contribution to science — the same architecture pattern needed for distributed climate monitoring and citizen science.</li>
+              <li>At <a href="https://molecule.xyz" class="content-link" target="_blank" rel="noopener noreferrer">Molecule</a>: built research funding infrastructure for decentralized science — directly applicable to climate research coordination and novel funding mechanisms.</li>
+              <li>Looking for senior engineering, tech lead, or CTO-adjacent roles at climate organizations, research institutes, policy bodies, or mission-driven startups.</li>
+              <li>Based in Berlin — open to Germany, Europe, and the UK.</li>
+            </ul>
+            <div class="flex flex-wrap gap-2 pt-1">
+              {["Data Infrastructure", "Research Platforms", "Privacy Tech", "Open Source", "Team Leadership", "Technical Strategy"].map(tag => (
+                <span class="bg-emerald-100 text-emerald-800 text-xs font-medium px-2.5 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <div class="w-2/5 shrink-0">
+            <img src={jpg_profile.src} alt="Stefan Adolf" class="rounded-lg w-full h-full object-cover object-center" />
+          </div>
+        </div>
+
         <div class="space-y-6">
           <h2 class="text-2xl font-semibold mb-4">
             Professional Work Experience
@@ -58,84 +80,75 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
             position="welshare"
             href="https://welshare.health"
             time="Mar 2025 - now"
-            image={jpg_welsh}
           >
             <p>
-              Taking responsibility for a dedicated tech stack that incentivizes
-              users to contribute medical and behavioural data points to
-              scientific research without giving up ownership or privacy.
-              Dealing with:
+              Building infrastructure for citizens to own and contribute health data to science
+              without surrendering privacy. Enabling researchers to access valuable datasets
+              while preserving participant sovereignty and consent.
             </p>
             <p>
               <ul class="list-disc list-inside space-y-1 w-full">
-                <li>incentive infrastructure</li>
-                <li>data ingestion and evaluation APIs</li>
-                <li>Wearable and health ecosystem adapters</li>
-                <li>User Experience Engineering</li>
-                <li>Cryptographic Accessibility</li>
-                <li>Compatibility to AI use cases</li>
+                <li>Data sovereignty architecture for research participation</li>
+                <li>Secure data ingestion and validation APIs</li>
+                <li>Wearable ecosystem adapters (Apple Health, Google Fit, etc.)</li>
+                <li>Cryptographic access controls and privacy-preserving mechanisms</li>
+                <li>User experience for complex research workflows</li>
+                <li>ML-ready data pipelines for scientific analysis</li>
               </ul>
+            </p>
+            <p class="text-sm text-gray-600 mt-2">
+              <em>Climate parallel:</em> This same architecture pattern powers distributed climate monitoring,
+              citizen science data collection, air quality sensing networks, and biodiversity research platforms.
             </p>
           </CardExperience>
           <CardExperience
-            title="Lead Web3 Developer"
-            position="Molecule AG"
+            title="Lead Infrastructure Developer"
+            position="Molecule AG — Decentralized Science"
             href="https://molecule.xyz"
             time="Oct 2022 - Mar 2025"
           >
+            <p>
+              Built IP and research funding infrastructure for decentralized science.
+              Developed novel crowdfunding mechanisms and tokenization systems for scientific research projects,
+              enabling researchers to secure funding outside traditional grant structures.
+            </p>
             <ul class="list-disc list-inside space-y-1 w-full">
               <li>
-                Built the IP infrastructure & contracts
-                <p>
-                  Using foundry for building, testing, scripting. Maintaining
-                  scripts for local and CI deployments. Fuzz & integration
-                  tests. Suite covers NFT, tokenization and crowdsale contracts.
-                  Prepared and supported audits. Uses minimal clones for ERC20
-                  fractions. Maintaining an exhaustive subgraph.
-                  <a
+                Research IP infrastructure and crowdfunding systems
+                <p class="text-sm">
+                  Open source infrastructure for scientific IP management (<a
                     href="https://github.com/moleculeprotocol/IPNFT"
                     target="_blank"
                     rel="noopener noreferrer"
-                    >https://github.com/moleculeprotocol/IPNFT</a
-                  >
+                    >github.com/moleculeprotocol/IPNFT</a>).
+                  Comprehensive test coverage, audit support, CI/CD automation.
+                  Built indexing infrastructure (subgraphs) for research project discovery.
                 </p>
               </li>
               <li>
-                Built the <a
-                  href="https://basescan.org/address/0x20893fdd12E5F968B2231821Fc65Dd0e4eAB797C#readProxyContract"
-                  target="_blank">catalyst contract suite</a
-                > (<a href="https://catalyst.molecule.xyz" target="_blank"
-                  >catalyst.molecule.xyz</a
-                >)
-                <p>
-                  Bonding Curve based market on an ERC-1155 asset, various fee
-                  taking concepts, configurable curve shapes (linear, non zero
-                  upramp, sigmoidal / logistic) and math parameters. Non-trivial
-                  market state transitions. Subgraphs, custom metadata API.
-                  Sophisticated separation of concerns, multisig setup awareness
+                Novel funding mechanisms for research
+                <p class="text-sm">
+                  Designed and implemented dynamic pricing curves and market mechanisms
+                  for research funding (<a href="https://catalyst.molecule.xyz" target="_blank"
+                    >catalyst.molecule.xyz</a>). Configurable economic models,
+                  sophisticated state transitions, custom metadata APIs.
                 </p>
               </li>
               <li>
-                Primary contributor to all frontend-facing applications (e.g. <a
-                  href="https://mint.molecule.xyz/ipnft/2"
-                  target="_blank">IPNFTs</a
-                >)
-                <p>
-                  Built many aspects of frontend facing apps, using
-                  Next14/React/TS. Using Viem/Wagmi (2). Dealt with
-                  decentralized encryption (Lit protocol), file upload flows
-                  (arweave, web3.storage), Siwe and AA/4337 support (Alchemy
-                  Account Kit), integrated Privy.
+                Full-stack contributor to research platforms
+                <p class="text-sm">
+                  Built frontend applications using Next.js/React/TypeScript.
+                  Integrated decentralized storage (Arweave, IPFS), encryption layers,
+                  and authentication systems for research data workflows.
                 </p>
               </li>
-              <li>Maintained 2 Lit network nodes (~ $1000/m)</li>
-              <li>
-                MD for German subsidiary (Desci Entwicklungsgesellschaft mbH)
-              </li>
-              <li>
-                Trusted signer on all Molecule and $BIO corporate multisigs.
-              </li>
+              <li>MD for German subsidiary (Desci Entwicklungsgesellschaft mbH)</li>
             </ul>
+            <p class="text-sm text-gray-600 mt-2">
+              <em>Climate parallel:</em> Novel funding mechanisms for climate research and innovation.
+              Carbon credit systems, climate bond mechanisms, open climate research funding platforms.
+              Same infrastructure patterns apply to any research coordination problem.
+            </p>
           </CardExperience>
           <CardExperience
             title="Developer Ambassador"
@@ -143,45 +156,49 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
             time="Jan 2018 - Dec 2021"
             href="https://turbinekreuzberg.com"
           >
+            <p>
+              Technical community builder and developer relations lead. Represented complex
+              engineering capabilities to non-technical audiences. Speaker, educator, bridge-builder
+              between technical and strategic worlds.
+            </p>
             <ul class="list-disc list-inside space-y-1 w-full">
               <li>
-                Mainly advocate role, representing agency at events, meetups,
-                and in public
-              </li>
-              <li>
-                Specialist dev tasks
-                <p>
-                  built backend / APIs for a fully automated supply chain
-                  solution (resourceful), built fully fledged management
-                  interface (Vue 2, Vuetify). Headless CMS integrations, custom
-                  Spryker projects, Kubernetes debugging, Cloud deployments,
-                  architecture support
+                Public technical representation
+                <p class="text-sm">
+                  Represented agency at events, meetups, and conferences across Europe.
+                  Media exposure in security, IT, and health publications.
+                  Ran local developer meetup groups (Coding Earth) across multiple cities.
                 </p>
               </li>
               <li>
-                Blockchain / Decentralized Evangelist and Developer
-                <p>
-                  Main contributor to "DePA", Ethereum based medical health
-                  records, identity solutions using W3C/DID & VCs, building an
-                  universal Covid immunization certificate verifier (<a
+                Specialist engineering projects
+                <p class="text-sm">
+                  Built backend APIs for automated supply chain solutions. Full-stack
+                  management interfaces (Vue 2, Vuetify). Headless CMS integrations,
+                  Kubernetes debugging, cloud deployments, architecture consulting.
+                </p>
+              </li>
+              <li>
+                Medical data sovereignty and identity infrastructure
+                <p class="text-sm">
+                  Led technical development of "DePA" (medical health records platform).
+                  Identity solutions using W3C/DID & Verifiable Credentials.
+                  Built universal Covid immunization certificate verifier (<a
                     href="https://github.com/elmariachi111/ultimate-non-infectious-verifier"
-                    target="_blank">Univax</a
-                  >).
+                    target="_blank">Univax</a>).
                 </p>
               </li>
               <li>
-                exposure to media (security / IT / health publications) for tech
-                topics & decentralised patient data
-                <li>
-                  university support (HTW Berlin) <br />
-
-                  supported 5 student groups with techno-economical project
-                  ideas
-                </li>
-                <li>ran local (coding earth) meetup groups all over Europe</li>
-                <li>supported tech sales team</li>
+                University collaboration (HTW Berlin): supported 5 student groups with
+                techno-economical project concepts
               </li>
+              <li>Technical sales support and client education</li>
             </ul>
+            <p class="text-sm text-gray-600 mt-2">
+              <em>Why this matters:</em> Climate organizations constantly need this bridge between
+              technical capabilities and strategic decision-making. Developer advocacy, public communication,
+              and cross-functional leadership are core climate tech skills.
+            </p>
           </CardExperience>
           <CardExperience
             title="Lead Developer / Fullstack"
@@ -239,15 +256,14 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
           <h2 class="text-2xl font-semibold mb-4">Projects</h2>
           <div class="space-y-6">
             <CardExperience
-              title="Technical Advisor "
+              title="Technical Advisor"
               position="Welshare Health"
-              time="2024 - "
+              time="2024 - 2025"
               href="https://welshare.health"
             >
-              supporting welshare to build KYC / AML compliant token launch
-              primitives, help with token generation, brainstorming and advising
-              on decentralised storage aspects, app development and data
-              architectures
+              Advised on data architectures for health research platforms.
+              Supported decentralized storage design, app development strategy,
+              and compliance frameworks for research data handling.
             </CardExperience>
             <CardExperience
               title="Head Curator"
@@ -263,47 +279,12 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
             </CardExperience>
             <CardExperience
               title="Freelancer"
-              position="Warranti"
-              time="Summer 22"
+              position="Warranti — Asset Tokenization"
+              time="Summer 2022"
               image={jpg_warranti}
             >
-              supported an RWA company with token architecture. Built proof of
-              concept for a Seaport based trading protocol, using custom on
-              chain events to signal vaulting of RWAs.
-            </CardExperience>
-            <CardExperience
-              title="Cofounder"
-              position="Takeover Movement"
-              time="Nov 2021 - Aug 2022"
-              image={jpg_takeover}
-            >
-              The Takeover Movement was supposed to be a Patreon / Bandcamp
-              replacement in Web3. Built prototype in Next / Wagmi. Tokengated
-              deeplinks, Paypal & crypto payment options. Failed after the team
-              became massively web3-bearish during the FTX / Terra-meltdown
-            </CardExperience>
-            <CardExperience
-              title="Cofounder"
-              position="Splice"
-              time="Oct 2021 - May 2022"
-              href="https://getsplice.io/"
-            >
-              <p>
-                Created out of a finalist project at EthOnline 21. Splice is a
-                derivative NFT platform that allows NFT holders to mint derived
-                artworks using p5 algorithms that are stored on IPFS and NFTs
-                themselves. Derivatives are limited, code style authors get paid
-                when holders mint new pieces. Failed after remote team didn't
-                want to take the risk
-              </p>
-              <ul class="list-disc list-inside space-y-1 w-full">
-                <li>Rust based color extraction</li>
-                <li>Oraclized color palette proofs</li>
-                <li>
-                  Contract suite (Derivative NFT collection, style collection,
-                  payment splitters, royalty modules)
-                </li>
-              </ul>
+              Built proof of concept for asset trading protocol with custom event systems
+              for vault tracking and settlement workflows.
             </CardExperience>
           </div>
         </section>
@@ -315,88 +296,88 @@ import jpg_welsh from "../assets/welshare_gang.jpg";
             {
               [
                 {
-                  name: "Typescript / Node",
+                  name: "TypeScript / Node",
                   experience: "12 years",
                   rating: 5,
                   description:
-                    "Built countless TS applications, backends, node servers, database layers, serverless functions etc.",
+                    "Built countless TS applications, backends, node servers, database layers, serverless functions, data pipelines, APIs.",
                 },
                 {
-                  name: "React",
+                  name: "React / Modern Frontend",
                   experience: "5 years",
                   rating: 5,
                   description:
-                    "All obvious fundamentals, composition, hooks, context, suspense. Deal with SSR & SSG. Most familiar with Nextjs, CRA, Gatsby, Astro.",
+                    "All fundamentals: composition, hooks, context, suspense. SSR & SSG. Most familiar with Next.js, Gatsby, Astro. Built complex data visualization and research platforms.",
                 },
                 {
-                  name: "Solidity",
-                  experience: "4 years",
+                  name: "Mathematics & Modeling",
+                  experience: "25 years",
                   rating: 4,
                   description:
-                    "Built ~6 larger contract suites, using Foundry, Hardhat, Truffle. Deep understanding of ABI encoding, byte operations, fix point maths and all relevant tooling",
-                },
-                {
-                  name: "Rust",
-                  experience: "1 years",
-                  rating: 2,
-                  description:
-                    "Can write standalone Rust apps (with some gpt help), understand most concepts, but not a pro. Can build simple Solana programs. Build local tools & eWASM exports",
-                },
-                {
-                  name: "Subgraphs",
-                  experience: "4 years",
-                  rating: 4,
-                  description:
-                    "Setting up schema architectures, local and remote deployments, grafts, imports, studio setups, matchstick-as testing",
-                },
-                {
-                  name: "EVM / Consensus",
-                  experience: "4 years",
-                  rating: 3,
-                  description:
-                    "Deep knowledge of EVM storage layout, Merkle Patricia tries, Proofs. Quite familiar with the PoS consensus system, EIP 1559",
-                },
-                {
-                  name: "EIP ecosystem",
-                  experience: "5 years",
-                  rating: 4,
-                  description:
-                    "Deeply familiar with all major standards (all OpenZeppelin primitives), excited about EIP 6551, 4361, 1271 and their upcoming extensions",
-                },
-                {
-                  name: "Decentralised Periphery",
-                  experience: "4 years",
-                  rating: 4,
-                  description:
-                    "Decentralised Storage: IPFS / Filecoin, Pinata / web3.storage (UCANs), Arweave / Irys. Deeply familiar with Ceramic, EAS. Built identity-aware projects on top of W3C DIDs, VCs, JSON-LD",
+                    "FH Diploma in Mathematics (TFH Berlin). Deep understanding of algorithms, numerical methods, system modeling. Built economic models, pricing curves, simulation systems.",
                 },
                 {
                   name: "Database Systems",
                   experience: "22 years",
                   rating: 4,
                   description:
-                    "SQL (MySQL, SQLite, Postgres, Oracle) & NoSQL (Mongo, Redis), Indexers (Elasticsearch), ORMs (Hibernate, Doctrine, Prisma, kysely, TypeORM)",
+                    "SQL (PostgreSQL, MySQL, SQLite, Oracle) & NoSQL (MongoDB, Redis), Indexers (Elasticsearch), ORMs (Prisma, TypeORM, kysely, Hibernate, Doctrine)",
                 },
                 {
-                  name: "Dev Ops / Deployment",
+                  name: "Data Indexing & Querying",
+                  experience: "4 years",
+                  rating: 4,
+                  description:
+                    "Built comprehensive indexing systems using GraphQL schemas. Designed efficient data architectures for research platforms, optimized query performance, managed large-scale data ingestion pipelines.",
+                },
+                {
+                  name: "Python / Scientific Computing",
+                  experience: "3 years",
+                  rating: 3,
+                  description:
+                    "Jupyter notebooks, numerical simulations, data analysis, scientific modeling. Can build data pipelines and research tooling.",
+                },
+                {
+                  name: "Cryptography & Privacy",
+                  experience: "4 years",
+                  rating: 4,
+                  description:
+                    "Privacy-preserving systems, cryptographic access controls, identity infrastructure (W3C DIDs, Verifiable Credentials), secure data sharing architectures.",
+                },
+                {
+                  name: "Decentralized Storage",
+                  experience: "4 years",
+                  rating: 4,
+                  description:
+                    "IPFS, Arweave, Filecoin ecosystems. Designed data availability systems for research and scientific data. Understanding of content addressing, data pinning, distributed storage architectures.",
+                },
+                {
+                  name: "DevOps / Infrastructure",
                   experience: "20 years",
                   rating: 3,
                   description:
-                    "Cloud Deployments (GCP, Digital Ocean, AWS), Docker, CI/CD, Logging & Monitoring. Running Consensus / IPFS Nodes. Can deploy a payload on K8S and read Helm Charts if necessary.",
+                    "Cloud (GCP, Digital Ocean, AWS), Docker, CI/CD, monitoring. Can deploy on Kubernetes, manage infrastructure, debug production systems.",
                 },
                 {
-                  name: "PHP",
+                  name: "PHP / Legacy Systems",
                   experience: "infinite years",
                   rating: 4,
                   description:
-                    "Ragequit the ecosystem in 2019, was professional Symfony user, gave talks at major conferences. Also used Laravel, Zend, Wordpress, Spryker, API Platform",
+                    "Professional Symfony user, conference speaker. Also Laravel, Zend, WordPress. Left ecosystem in 2019, but understand enterprise PHP systems.",
                 },
                 {
-                  name: "Python",
-                  experience: "3 years",
+                  name: "Contract Development",
+                  experience: "4 years",
+                  rating: 4,
+                  description:
+                    "Built production smart contract systems using Foundry, Hardhat. Deep understanding of fixed-point math, testing strategies, economic mechanism design. Available for specialized applications.",
+                },
+                {
+                  name: "Rust",
+                  experience: "1 year",
                   rating: 2,
                   description:
-                    "mostly dealing with Jupyter notebooks, writing simulations for Solidity math in Python before continuing in Solidity.",
+                    "Can write standalone Rust applications, understand ownership model. Built local tooling and performance-critical components.",
                 },
               ].map((skill) => <SkillCard {...skill} />)
             }
